@@ -24,13 +24,15 @@ class LazyImageView: UIView {
 
     private func configureView() {
         // border
-        layer.borderWidth = 0.5
-        layer.borderColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        layer.cornerRadius = 12.25
+        layer.borderWidth = 0
+        layer.cornerRadius = 5
         layer.masksToBounds = true
         
         pinwheel.style = .medium
         pinwheel.hidesWhenStopped = true
+        pinwheel.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
         addSubview(pinwheel)
         addSubview(imageView)
         NSLayoutConstraint.activate([
@@ -47,7 +49,7 @@ class LazyImageView: UIView {
         imageView.image = .none
     }
     
-    func performImageService<T: Model>(model: T?, completion:@escaping (Result<UIImageView?, Error>)->()) {
+    func performImageService<T: Model>(model: T?) {
         guard let url = model?.imageURL else { return }
         pinwheel.startAnimating()
 
@@ -62,14 +64,13 @@ class LazyImageView: UIView {
                     model?.imageData = payload
                     self?.imageView.contentMode = self?.contentMode ?? .scaleAspectFit
                     self?.imageView.image = UIImage(data: payload)
-                    completion(.success(self?.imageView))
                 }
             case .failure(let error):
                 debugPrint("*** Error: \(String(describing: error.errorDescription))")
             }
         }
     }
-    
+
     func fillImage<T: Model>(model: T) {
         guard let imageData = model.imageData else { return }
         imageView.image = UIImage(data: imageData)

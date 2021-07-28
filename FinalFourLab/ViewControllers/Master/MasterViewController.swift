@@ -24,21 +24,20 @@ class MasterViewController: UIViewController {
         dataSource = UICollectionViewDiffableDataSource<Int, Product>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: Product) -> UICollectionViewCell? in
             
-            // Dequeue reusable cell using cell registration (Reuse identifier no longer needed)
+            // cell factory, may be new or used cells
             let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration,
                                                                     for: indexPath,
                                                                     item: identifier)
             return cell
         }
         
-        // Create a snapshot that define the current state of data source's data
+        // snapshot holds my sections and products
         var snapshot = NSDiffableDataSourceSnapshot<Int, Product>()
-        snapshot.appendSections([0, 1, 2, 3])
+        snapshot.appendSections([0])
         snapshot.appendItems(products)
         self.snapshot = snapshot
-//        snapshot.appendItems(dataItems, toSection: .main)
 
-        // Display data on the collection view by applying the snapshot to data source
+        // Display products
         dataSource?.apply(snapshot, animatingDifferences: false)
     }
     
@@ -55,11 +54,6 @@ class MasterViewController: UIViewController {
     }
 
     private func configureView() {
-//        let layoutConfig = UICollectionLayoutListConfiguration(appearance: .plain)
-//        let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
-        
-        // Create collection view with list layout
-//        let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: listLayout)
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         view.addSubview(collectionView)
         self.collectionView = collectionView

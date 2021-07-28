@@ -9,7 +9,7 @@ import UIKit
 
 struct MasterContentConfiguration: UIContentConfiguration, Hashable {
     var model: Product?
-    var cell: UICollectionViewListCell?
+//    var cell: UICollectionViewListCell?
     
     func makeContentView() -> UIView & UIContentView {
         CellContentView(configuration: self)

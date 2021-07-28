@@ -33,25 +33,18 @@ class CellContentView: UIView {
         title.numberOfLines = 0
         author.lineBreakMode = .byWordWrapping
         author.numberOfLines = 0
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         let stackView = UIStackView.stack(axis: .vertical)
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.add([title, author, imageView])
+        stackView.add([title, author, imageView, CGFloat(4)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         NSLayoutConstraint.activate([
-            title.leadingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: 7),
-            title.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 2),
-            imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 2),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
         ])
-        
-        imageView.layer.borderWidth = 1.5
-        imageView.layer.borderColor = UIColor.green.cgColor
     }
 }
 
@@ -76,21 +69,23 @@ extension CellContentView: UIContentView {
         activeConfig = configuration
         title.text = configuration.model?.title
         author.text = configuration.model?.author
+
         guard let model = configuration.model, let _ = model.imageData else {
-            // load the image if there
-            imageView.performImageService(model: configuration.model) { [weak self] result in
-                switch result {
-                case .success( _ ):
-                    guard let cell = self?.activeConfig.cell else { return }
-                    cell.setNeedsUpdateConfiguration()
-                default:
-                    return
-                }
-            }
+            // load the image
+            imageView.performImageService(model: configuration.model)
+//            imageView.performImageService(model: configuration.model) { [weak self] result in
+//                switch result {
+//                case .success( _ ):
+//                    guard let cell = self?.activeConfig.cell else { return }
+//                    cell.setNeedsUpdateConfiguration()
+//                default:
+//                    return
+//                }
+//            }
             return
         }
         imageView.fillImage(model: model)
-        setNeedsDisplay()
+//        setNeedsDisplay()
     }
 }
 

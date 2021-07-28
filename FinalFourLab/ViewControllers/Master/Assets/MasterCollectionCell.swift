@@ -13,7 +13,7 @@ class MasterCollectionCell: UICollectionViewListCell {
     override func updateConfiguration(using state: UICellConfigurationState) {
         var newConfiguration = MasterContentConfiguration().updated(for: state)
         newConfiguration.model = model
-        newConfiguration.cell = self
+//        newConfiguration.cell = self
 
         // Trigger UI update
         contentConfiguration = newConfiguration
