@@ -44,20 +44,25 @@ class LazyImageView: UIView {
     }
     
     func prepareForReuse() {
-        imageView.image = nil
+        imageView.image = .none
     }
     
-    func performImageService<T: Model>(model: T) {
-        guard let url = model.imageURL else { return }
+    func performImageService<T: Model>(model: T?, completion:@escaping (Result<UIImageView?, Error>)->()) {
+        guard let url = model?.imageURL else { return }
         pinwheel.startAnimating()
 
         ServiceManager.sharedService.startServiceAt(url: url) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.pinwheel.stopAnimating()
+            }
+
             switch result {
             case .success(let payload):
                 DispatchQueue.main.async {
-                    self?.pinwheel.stopAnimating()
-                    model.imageData = payload
+                    model?.imageData = payload
+                    self?.imageView.contentMode = self?.contentMode ?? .scaleAspectFit
                     self?.imageView.image = UIImage(data: payload)
+                    completion(.success(self?.imageView))
                 }
             case .failure(let error):
                 debugPrint("*** Error: \(String(describing: error.errorDescription))")

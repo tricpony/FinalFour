@@ -9,14 +9,11 @@ import UIKit
 
 class MasterCollectionCell: UICollectionViewListCell {
     var model: Product?
-    
+
     override func updateConfiguration(using state: UICellConfigurationState) {
         var newConfiguration = MasterContentConfiguration().updated(for: state)
-        
-        // Update any configuration parameters related to data item
-        newConfiguration.title = model?.title
-        newConfiguration.author = model?.author
-        newConfiguration.favorite = model?.favorite
+        newConfiguration.model = model
+        newConfiguration.cell = self
 
         // Trigger UI update
         contentConfiguration = newConfiguration

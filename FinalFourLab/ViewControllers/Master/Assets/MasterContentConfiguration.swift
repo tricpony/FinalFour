@@ -8,10 +8,8 @@
 import UIKit
 
 struct MasterContentConfiguration: UIContentConfiguration, Hashable {
-    var title: String?
-    var author: String?
-    var imageURL: URL?
-    var favorite: Bool?
+    var model: Product?
+    var cell: UICollectionViewListCell?
     
     func makeContentView() -> UIView & UIContentView {
         CellContentView(configuration: self)
