@@ -25,6 +25,7 @@
 		D1C1669826B1B1FD00CFFCE3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1669726B1B1FD00CFFCE3 /* Model.swift */; };
 		D1C166A326B1B4E200CFFCE3 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */; };
 		D1C166B426B2C34200CFFCE3 /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */; };
+		D1C166BD26B338AD00CFFCE3 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D1C1669726B1B1FD00CFFCE3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheet.swift; sourceTree = "<group>"; };
+		D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			children = (
 				D1C1663F26AFFF7500CFFCE3 /* Master */,
 				D1C1663E26AFFF6800CFFCE3 /* Detail */,
+				D1C166BB26B3387B00CFFCE3 /* Split */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -252,6 +255,14 @@
 				D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D1C166BB26B3387B00CFFCE3 /* Split */ = {
+			isa = PBXGroup;
+			children = (
+				D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */,
+			);
+			path = Split;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C166B426B2C34200CFFCE3 /* StyleSheet.swift in Sources */,
+				D1C166BD26B338AD00CFFCE3 /* SplitViewController.swift in Sources */,
 				D1C166A326B1B4E200CFFCE3 /* LazyImageView.swift in Sources */,
 				D1C1667926B11C2B00CFFCE3 /* MasterCollectionCell.swift in Sources */,
 				D1C1665226B0025300CFFCE3 /* CellContentView.swift in Sources */,

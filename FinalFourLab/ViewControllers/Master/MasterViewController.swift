@@ -9,11 +9,21 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class MasterViewController: UIViewController {
+class MasterViewController: UIViewController, UICollectionViewDelegate {
     var collectionView: UICollectionView?
     var dataSource: UICollectionViewDiffableDataSource<Int, Product>?
     var snapshot: NSDiffableDataSourceSnapshot<Int, Product>?
     var products = [Product]()
+    let isCompact : Bool
+    
+    init(isCompact:Bool) {
+        self.isCompact = isCompact
+        super.init(nibName: .none, bundle: .none)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private func registerAssets(on collectionView: UICollectionView) {
         let cellRegistration = UICollectionView.CellRegistration<MasterCollectionCell, Product> { (cell, indexPath, item) in
@@ -58,6 +68,8 @@ class MasterViewController: UIViewController {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         view.addSubview(collectionView)
         self.collectionView = collectionView
+        collectionView.delegate = self
+        collectionView.backgroundColor = UIColor(named: "gridBackground")
         
         // Make collection view take up the entire view
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -125,6 +137,18 @@ class MasterViewController: UIViewController {
 
     // MARK: UICollectionViewDelegate
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailVC = DetailViewController()
+        let product = products[indexPath.row]
+        detailVC.product = product
+        if isCompact {
+            navigationController?.pushViewController(detailVC, animated: true)
+        } else {
+            let nav = UINavigationController(rootViewController: detailVC)
+            showDetailViewController(nav, sender: .none)
+        }
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {

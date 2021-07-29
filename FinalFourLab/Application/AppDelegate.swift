@@ -14,13 +14,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        let root = UISplitViewController(style: .doubleColumn)
-        let master = MasterViewController()
-        root.setViewController(master, for: .primary)
+        let root = SplitViewController(style: .doubleColumn)
         
+        // iPad setup
+        configRegularNavStack(in: root)
+
+        // iPhone setup
+        configCompactNavStack(in: root)
+
         window.rootViewController = root
         window.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func configRegularNavStack(in split: UISplitViewController) {
+        let master = MasterViewController(isCompact: false)
+        let detail = DetailViewController()
+        let nav = UINavigationController(rootViewController: detail)
+        split.setViewController(master, for: .primary)
+        split.setViewController(nav, for: .secondary)
+    }
+    
+    private func configCompactNavStack(in split: UISplitViewController) {
+        let master = MasterViewController(isCompact: true)
+        let nav = UINavigationController(rootViewController: master)
+        split.setViewController(nav, for: .compact)
     }
 }
