@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         let root = UISplitViewController(style: .doubleColumn)
         let master = MasterViewController()
-//        let nav = UINavigationController()
-//        nav.setViewControllers([master] animated: false)
         root.setViewController(master, for: .primary)
         
         window.rootViewController = root

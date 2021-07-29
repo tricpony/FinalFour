@@ -23,11 +23,11 @@ class CellContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureViews() {
+    private func configureViews() {
         layer.borderWidth = 0.5
-        layer.borderColor = UIColor.red.cgColor
+        layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 5
-        layer.masksToBounds = true
+        backgroundColor = .clear
         
         title.lineBreakMode = .byWordWrapping
         title.numberOfLines = 0
@@ -44,6 +44,7 @@ class CellContentView: UIView {
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 2),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -2),
         ])
     }
 }
@@ -62,6 +63,19 @@ extension CellContentView: UIContentView {
         }
     }
 
+    private func applyStyle(style: TextStyle?) {
+        switch style {
+        case .title( _ , _ , _ , let color):
+            title.textColor = color
+            title.font = style?.font
+        case .author( _ , _ , _ , let color):
+            author.textColor = color
+            author.font = style?.font
+        default:
+            return
+        }
+    }
+    
     private func apply(configuration: MasterContentConfiguration) {
         guard activeConfig != configuration else {
             return
@@ -69,23 +83,15 @@ extension CellContentView: UIContentView {
         activeConfig = configuration
         title.text = configuration.model?.title
         author.text = configuration.model?.author
+        applyStyle(style: configuration.titleStyle)
+        applyStyle(style: configuration.authorStyle)
 
         guard let model = configuration.model, let _ = model.imageData else {
             // load the image
             imageView.performImageService(model: configuration.model)
-//            imageView.performImageService(model: configuration.model) { [weak self] result in
-//                switch result {
-//                case .success( _ ):
-//                    guard let cell = self?.activeConfig.cell else { return }
-//                    cell.setNeedsUpdateConfiguration()
-//                default:
-//                    return
-//                }
-//            }
             return
         }
         imageView.fillImage(model: model)
-//        setNeedsDisplay()
     }
 }
 

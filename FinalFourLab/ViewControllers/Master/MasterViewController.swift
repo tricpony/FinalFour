@@ -42,14 +42,15 @@ class MasterViewController: UIViewController {
     }
     
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .fractionalWidth(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.5))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(66))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item, item])
         let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 4
         let layout = UICollectionViewCompositionalLayout(section: section)
-      
+
         return layout
     }
 
@@ -74,6 +75,7 @@ class MasterViewController: UIViewController {
         guard let data = try? Data(contentsOf: url) else { return }
         guard let products = JsonUtility<[Product]>.parseJSON(data) else { return }
         self.products = products
+        title = "Products"
     }
     
     override func viewDidLoad() {

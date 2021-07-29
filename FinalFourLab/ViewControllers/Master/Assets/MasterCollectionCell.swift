@@ -13,8 +13,12 @@ class MasterCollectionCell: UICollectionViewListCell {
     override func updateConfiguration(using state: UICellConfigurationState) {
         var newConfiguration = MasterContentConfiguration().updated(for: state)
         newConfiguration.model = model
-//        newConfiguration.cell = self
-
+        newConfiguration.titleStyle = TextStyle.titleStyle
+        newConfiguration.authorStyle = TextStyle.authorStyle
+        
+        contentView.backgroundColor = .clear
+        backgroundView?.backgroundColor = .clear
+        
         // Trigger UI update
         contentConfiguration = newConfiguration
     }
