@@ -72,10 +72,10 @@ extension CellContentView: UIContentView {
 
     private func applyStyle(style: TextStyle?) {
         switch style {
-        case .title( _ , _ , _ , let color):
+        case .title( _ , _ , let color):
             title.textColor = color
             title.font = style?.font
-        case .author( _ , _ , _ , let color):
+        case .author( _ , _ , let color):
             author.textColor = color
             author.font = style?.font
         default:
