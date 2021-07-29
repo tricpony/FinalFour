@@ -12,7 +12,14 @@ class CellContentView: UIView {
     var author = UILabel()
     var imageView = LazyImageView()
     private var activeConfig = MasterContentConfiguration()
-
+    private var hairline: UIView {
+        let line = UIView()
+        line.backgroundColor = UIColor(named: "hairline")
+        let height = line.heightAnchor.constraint(equalToConstant: 0.5)
+        line.addConstraint(height)
+        return line
+    }
+    
     init(configuration: MasterContentConfiguration) {
         super.init(frame: .zero)
         configureViews()
@@ -37,7 +44,7 @@ class CellContentView: UIView {
         let stackView = UIStackView.stack(axis: .vertical)
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.add([title, author, imageView, CGFloat(4)])
+        stackView.add([title, hairline, author, hairline, imageView, CGFloat(4)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         NSLayoutConstraint.activate([
