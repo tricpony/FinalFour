@@ -14,9 +14,9 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     var dataSource: UICollectionViewDiffableDataSource<Int, Product>?
     var snapshot: NSDiffableDataSourceSnapshot<Int, Product>?
     var products = [Product]()
-    let isCompact : Bool
+    let isCompact: Bool
     
-    init(isCompact:Bool) {
+    init(isCompact: Bool) {
         self.isCompact = isCompact
         super.init(nibName: .none, bundle: .none)
     }

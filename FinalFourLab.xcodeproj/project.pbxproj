@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17677E626B383DC00DA26FA /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */; };
+		D17677EC26B41A2C00DA26FA /* BorderedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17677EB26B41A2B00DA26FA /* BorderedImage.swift */; };
+		D17677FA26B42F0000DA26FA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */; };
+		D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */; };
+		D17677FC26B42F0000DA26FA /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */; };
+		D17677FD26B42F0000DA26FA /* MasterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* MasterCollectionCell.swift */; };
+		D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* CellContentView.swift */; };
+		D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C165E226AFC0DB00CFFCE3 /* AppDelegate.swift */; };
+		D176780026B42F0000DA26FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1669726B1B1FD00CFFCE3 /* Model.swift */; };
+		D176780126B42F0000DA26FA /* MasterContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* MasterContentConfiguration.swift */; };
+		D176780226B42F0000DA26FA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664026B0004700CFFCE3 /* MasterViewController.swift */; };
+		D176780326B42F0000DA26FA /* Stackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666B26B005EF00CFFCE3 /* Stackable.swift */; };
+		D176780426B42F0000DA26FA /* JsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */; };
+		D176780526B42F0000DA26FA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1662626AFFAF200CFFCE3 /* Product.swift */; };
+		D176780626B42F0000DA26FA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664926B0008800CFFCE3 /* DetailViewController.swift */; };
+		D176780726B42F0000DA26FA /* BorderedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17677EB26B41A2B00DA26FA /* BorderedImage.swift */; };
+		D176780826B42F0000DA26FA /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */; };
+		D176780926B42F0000DA26FA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665E26B0047400CFFCE3 /* ServiceManager.swift */; };
+		D176780C26B42F0000DA26FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C165ED26AFC0DE00CFFCE3 /* LaunchScreen.storyboard */; };
+		D176780D26B42F0000DA26FA /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = D1C1668426B12B1100CFFCE3 /* products.json */; };
+		D176780E26B42F0000DA26FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C165EB26AFC0DE00CFFCE3 /* Assets.xcassets */; };
 		D1C165E326AFC0DB00CFFCE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C165E226AFC0DB00CFFCE3 /* AppDelegate.swift */; };
 		D1C165EC26AFC0DE00CFFCE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C165EB26AFC0DE00CFFCE3 /* Assets.xcassets */; };
 		D1C165EF26AFC0DE00CFFCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C165ED26AFC0DE00CFFCE3 /* LaunchScreen.storyboard */; };
@@ -46,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
+		D17677EB26B41A2B00DA26FA /* BorderedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImage.swift; sourceTree = "<group>"; };
+		D176781226B42F0000DA26FA /* SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D176781726B42F0000DA26FA /* FinalFourLab copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FinalFourLab copy-Info.plist"; path = "/Users/aarthur/Development/iPhone/Scraps/Labs/FinalFour/FinalFourLab/FinalFourLab copy-Info.plist"; sourceTree = "<absolute>"; };
 		D1C165DF26AFC0DB00CFFCE3 /* FinalFourLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalFourLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1C165E226AFC0DB00CFFCE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1C165EB26AFC0DE00CFFCE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +99,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D176780A26B42F0000DA26FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1C165DC26AFC0DB00CFFCE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +130,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D17677EA26B4194C00DA26FA /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				D17677EB26B41A2B00DA26FA /* BorderedImage.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		D17677F626B42E8100DA26FA /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D1C1664926B0008800CFFCE3 /* DetailViewController.swift */,
+				D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D17677F726B42E8D00DA26FA /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		D1C165D626AFC0DB00CFFCE3 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +161,7 @@
 				D1C165F826AFC0DF00CFFCE3 /* FinalFourLabTests */,
 				D1C1660326AFC0DF00CFFCE3 /* FinalFourLabUITests */,
 				D1C165E026AFC0DB00CFFCE3 /* Products */,
+				D176781726B42F0000DA26FA /* FinalFourLab copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +171,7 @@
 				D1C165DF26AFC0DB00CFFCE3 /* FinalFourLab.app */,
 				D1C165F526AFC0DF00CFFCE3 /* FinalFourLabTests.xctest */,
 				D1C1660026AFC0DF00CFFCE3 /* FinalFourLabUITests.xctest */,
+				D176781226B42F0000DA26FA /* SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +219,7 @@
 		D1C1661626AFC12100CFFCE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D17677EA26B4194C00DA26FA /* SwiftUI */,
 				D1C1668926B191DC00CFFCE3 /* Views */,
 				D1C1663426AFFD9400CFFCE3 /* JSON */,
 				D1C1662E26AFFD1200CFFCE3 /* Network */,
@@ -216,7 +275,8 @@
 		D1C1663E26AFFF6800CFFCE3 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				D1C1664926B0008800CFFCE3 /* DetailViewController.swift */,
+				D17677F726B42E8D00DA26FA /* SwiftUI */,
+				D17677F626B42E8100DA26FA /* UIKit */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -268,6 +328,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D17677F826B42F0000DA26FA /* SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D176780F26B42F0000DA26FA /* Build configuration list for PBXNativeTarget "SwiftUI" */;
+			buildPhases = (
+				D17677F926B42F0000DA26FA /* Sources */,
+				D176780A26B42F0000DA26FA /* Frameworks */,
+				D176780B26B42F0000DA26FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUI;
+			productName = FinalFourLab;
+			productReference = D176781226B42F0000DA26FA /* SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D1C165DE26AFC0DB00CFFCE3 /* FinalFourLab */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1C1660926AFC0E000CFFCE3 /* Build configuration list for PBXNativeTarget "FinalFourLab" */;
@@ -357,6 +434,7 @@
 			projectRoot = "";
 			targets = (
 				D1C165DE26AFC0DB00CFFCE3 /* FinalFourLab */,
+				D17677F826B42F0000DA26FA /* SwiftUI */,
 				D1C165F426AFC0DF00CFFCE3 /* FinalFourLabTests */,
 				D1C165FF26AFC0DF00CFFCE3 /* FinalFourLabUITests */,
 			);
@@ -364,6 +442,16 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D176780B26B42F0000DA26FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D176780C26B42F0000DA26FA /* LaunchScreen.storyboard in Resources */,
+				D176780D26B42F0000DA26FA /* products.json in Resources */,
+				D176780E26B42F0000DA26FA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1C165DD26AFC0DB00CFFCE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -391,6 +479,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D17677F926B42F0000DA26FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D17677FA26B42F0000DA26FA /* StyleSheet.swift in Sources */,
+				D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */,
+				D17677FC26B42F0000DA26FA /* LazyImageView.swift in Sources */,
+				D17677FD26B42F0000DA26FA /* MasterCollectionCell.swift in Sources */,
+				D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */,
+				D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */,
+				D176780026B42F0000DA26FA /* Model.swift in Sources */,
+				D176780126B42F0000DA26FA /* MasterContentConfiguration.swift in Sources */,
+				D176780226B42F0000DA26FA /* MasterViewController.swift in Sources */,
+				D176780326B42F0000DA26FA /* Stackable.swift in Sources */,
+				D176780426B42F0000DA26FA /* JsonUtility.swift in Sources */,
+				D176780526B42F0000DA26FA /* Product.swift in Sources */,
+				D176780626B42F0000DA26FA /* DetailViewController.swift in Sources */,
+				D176780726B42F0000DA26FA /* BorderedImage.swift in Sources */,
+				D176780826B42F0000DA26FA /* PlaceholderViewController.swift in Sources */,
+				D176780926B42F0000DA26FA /* ServiceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D1C165DB26AFC0DB00CFFCE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +519,8 @@
 				D1C1666726B0048F00CFFCE3 /* JsonUtility.swift in Sources */,
 				D1C1662726AFFAF200CFFCE3 /* Product.swift in Sources */,
 				D1C1664A26B0008800CFFCE3 /* DetailViewController.swift in Sources */,
+				D17677EC26B41A2C00DA26FA /* BorderedImage.swift in Sources */,
+				D17677E626B383DC00DA26FA /* PlaceholderViewController.swift in Sources */,
 				D1C1665F26B0047400CFFCE3 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +568,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D176781026B42F0000DA26FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MX6EDE7QQU;
+				INFOPLIST_FILE = "FinalFourLab copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabit.FinalFourLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D176781126B42F0000DA26FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MX6EDE7QQU;
+				INFOPLIST_FILE = "FinalFourLab copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gigabit.FinalFourLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D1C1660726AFC0E000CFFCE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -696,6 +847,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D176780F26B42F0000DA26FA /* Build configuration list for PBXNativeTarget "SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D176781026B42F0000DA26FA /* Debug */,
+				D176781126B42F0000DA26FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D1C165DA26AFC0DB00CFFCE3 /* Build configuration list for PBXProject "FinalFourLab" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
