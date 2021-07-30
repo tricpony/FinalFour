@@ -11,8 +11,6 @@ class DetailViewController: UIViewController {
     var product: Product
     var imageView = UIImageView()
 
-    var product: Product
-
     init(product: Product) {
         self.product = product
         super.init(nibName: .none, bundle: .none)
@@ -44,7 +42,7 @@ class DetailViewController: UIViewController {
         ])
 
         // configure image view
-        guard let imageData = product?.imageData else { return }
+        guard let imageData = product.imageData else { return }
         imageView.image = UIImage(data: imageData)
 //        let height = imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/2)
 //        let width = imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 1/2)
@@ -53,7 +51,16 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureView()
         title = "Details"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // navigation looks choppy
+        // suspect split VC is offender
+        // better now since moving this from viewDidLoad
+        // but still flakey
+        configureView()
     }
 }
