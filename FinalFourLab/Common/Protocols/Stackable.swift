@@ -29,9 +29,19 @@ extension UIStackView {
 }
 
 extension UIView: Stackable {
+    
+    static func hairline() -> UIView {
+        let line = UIView()
+        line.backgroundColor = UIColor(named: "hairline")
+        let height = line.heightAnchor.constraint(equalToConstant: 0.5)
+        line.addConstraint(height)
+        return line
+    }
+
     func configure(stack: UIStackView) {
         stack.addArrangedSubview(self)
     }
+    
 }
 
 extension CGFloat: Stackable {

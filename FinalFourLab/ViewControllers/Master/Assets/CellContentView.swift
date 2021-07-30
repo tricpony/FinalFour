@@ -44,7 +44,7 @@ class CellContentView: UIView {
         let stackView = UIStackView.stack(axis: .vertical)
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.add([title, hairline, author, hairline, imageView, CGFloat(4)])
+        stackView.add([title, UIView.hairline(), author, UIView.hairline(), imageView, CGFloat(4)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         NSLayoutConstraint.activate([
