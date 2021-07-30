@@ -19,30 +19,29 @@ struct DetailContent<T: Model>: View {
         GeometryReader { geometry in
             VStack (alignment: .center) {
                 Text(product.title)
-                    .foregroundColor(.primary)
-                    .background(Rectangle().stroke(Color.black, lineWidth: 1))
-                    .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2, alignment: .center)
-                
+                .foregroundColor(.primary)
+                .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2.7, alignment: .center)
+                .background(Rectangle()
+                        .strokeBorder(Color.black, lineWidth: 0.5).background(Rectangle().fill(Color.gray.opacity(0.1))))
+
                 BorderedImage(imageData: product.imageData ?? Data())
-                    .offset(y: -130)
-                    .padding(.bottom, -130)
+                    .offset(y: -150)
+                    .padding(.bottom, -180)
+                
+                Divider()
 
-            }
-            Divider()
+                VStack(alignment: .leading) {
+                    Text(product.productLabel)
+                        .font(.title)
 
-            VStack(alignment: .leading) {
-                Text(product.productLabel)
-                    .font(.title)
-
-                HStack {
-                    Text("Author")
-                        .font(.subheadline)
+                    HStack {
+                        Text("Author")
+                            .font(.subheadline)
+                    }
                 }
+                .padding()
             }
-            .padding()
         }
-        .padding(.leading, edgePadding)
-
     }
 }
 
