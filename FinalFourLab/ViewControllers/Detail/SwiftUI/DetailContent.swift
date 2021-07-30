@@ -20,7 +20,7 @@ struct DetailContent<T: Model>: View {
             VStack {
                 Text(product.title)
                 .foregroundColor(.primary)
-                .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2.7, alignment: .center)
+                .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2.7, alignment: .top)
                 .background(Rectangle()
                         .strokeBorder(Color.black, lineWidth: 0.5).background(Rectangle().fill(Color.gray.opacity(0.1))))
 
