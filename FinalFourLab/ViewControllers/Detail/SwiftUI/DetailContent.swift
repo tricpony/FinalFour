@@ -17,7 +17,7 @@ struct DetailContent<T: Model>: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack (alignment: .center) {
+            VStack {
                 Text(product.title)
                 .foregroundColor(.primary)
                 .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2.7, alignment: .center)
@@ -27,7 +27,8 @@ struct DetailContent<T: Model>: View {
                 BorderedImage(imageData: product.imageData ?? Data())
                     .offset(y: -150)
                     .padding(.bottom, -180)
-                
+
+                Spacer()
                 Divider()
 
                 VStack(alignment: .leading) {
