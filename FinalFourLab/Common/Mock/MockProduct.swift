@@ -5,7 +5,7 @@
 //  Created by aarthur on 7/30/21.
 //
 
-import Foundation
+import UIKit
 
 class MockProduct: Model {
     static func == (lhs: MockProduct, rhs: MockProduct) -> Bool {
@@ -15,7 +15,7 @@ class MockProduct: Model {
     var author: String?
     var imageURL: URL?
     var favorite: Bool?
-    var imageData: Data?
+    var imageData: Data? = UIImage(named: "Fallback")?.pngData()
     var productLabel = "productLabel"
 
     init(title: String) {

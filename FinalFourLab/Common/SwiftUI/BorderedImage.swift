@@ -54,7 +54,7 @@ struct RectangleView: View {
 
     var body: some View {
         let image = Image(uiImage: UIImage(data: imageData) ?? UIImage())
-        image.clipShape(Rectangle())
+        image.resizable().aspectRatio(contentMode: .fit).clipShape(Rectangle())
     }
 }
 
@@ -69,7 +69,7 @@ struct CircleView: View {
 
     var body: some View {
         let image = Image(uiImage: UIImage(data: imageData) ?? UIImage())
-        image.clipShape(Circle())
+        image.resizable().aspectRatio(contentMode: .fit).clipShape(Circle())
     }
 }
 

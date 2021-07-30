@@ -18,15 +18,16 @@ struct DetailContent<T: Model>: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text(product.title)
+                Text(product.title).padding(.top, 22)
                 .foregroundColor(.primary)
                 .frame(width: geometry.size.width - (edgePadding * 2), height: geometry.size.height / 2.7, alignment: .top)
                 .background(Rectangle()
                         .strokeBorder(Color.black, lineWidth: 0.5).background(Rectangle().fill(Color.gray.opacity(0.1))))
 
                 BorderedImage(imageData: product.imageData ?? Data())
-                    .offset(y: -150)
+                    .offset(y: -180)
                     .padding(.bottom, -180)
+                    .frame(width: 288, height: 288, alignment: .center)
 
                 Spacer()
                 Divider()
@@ -34,11 +35,6 @@ struct DetailContent<T: Model>: View {
                 VStack(alignment: .leading) {
                     Text(product.productLabel)
                         .font(.title)
-
-                    HStack {
-                        Text("Author")
-                            .font(.subheadline)
-                    }
                 }
                 .padding()
             }
