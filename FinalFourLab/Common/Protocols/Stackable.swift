@@ -33,8 +33,9 @@ extension UIView: Stackable {
     static func hairline() -> UIView {
         let line = UIView()
         line.backgroundColor = UIColor(named: "hairline")
-        let height = line.heightAnchor.constraint(equalToConstant: 0.5)
-        line.addConstraint(height)
+        NSLayoutConstraint.activate([
+            line.heightAnchor.constraint(equalToConstant: 0.5)
+        ])
         return line
     }
 
