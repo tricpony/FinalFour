@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
     var imageView = UIImageView()
     var titleLabel = UILabel()
     var authorLabel = UILabel()
-
+    
     init(product: Product) {
         self.product = product
         super.init(nibName: .none, bundle: .none)
@@ -25,6 +25,10 @@ class DetailViewController: UIViewController {
     private func configureView() {
         let mainStackView = UIStackView.stack()
         let infoStackView = UIStackView.stack(axis: .vertical)
+        let hairlineTitle = UIView.hairline()
+        let hairlineAuthor = UIView.hairline()
+        imageView.contentMode = .scaleAspectFill
+        
         mainStackView.alignment = .center
         mainStackView.distribution = .fill
         infoStackView.alignment = .leading
@@ -32,7 +36,7 @@ class DetailViewController: UIViewController {
 
         let detailStackView = UIStackView.stack(axis: .vertical)
         detailStackView.alignment = .center
-        infoStackView.add([titleLabel, UIView.hairline(), authorLabel, UIView.hairline(), CGFloat(4)])
+        infoStackView.add([titleLabel, hairlineTitle, authorLabel, hairlineAuthor, CGFloat(4)])
         detailStackView.add([infoStackView, imageView, CGFloat(6)])
 
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +51,8 @@ class DetailViewController: UIViewController {
             mainStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
             imageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: widthFraction),
             imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: heightFraction),
+            hairlineTitle.widthAnchor.constraint(equalTo: imageView.widthAnchor),
+            hairlineAuthor.widthAnchor.constraint(equalTo: imageView.widthAnchor)
         ])
 
         // configure image and labels
@@ -62,8 +68,25 @@ class DetailViewController: UIViewController {
             infoStackView.widthAnchor.constraint(equalTo: imageView.widthAnchor),
         ])
         view.backgroundColor = UIColor(named: "detailBackground")
+        applyStyle()
     }
     
+    private func applyStyle() {
+        let titleStyle: TextStyle = .title(FontStyle.titleFontFamily, 16, FontStyle.titleColor)
+        let authorStyle: TextStyle = .author(FontStyle.authorFontFamily, 15, FontStyle.authorColor)
+        [titleStyle, authorStyle].forEach {
+            
+            switch $0 {
+            case .title( _ , _ , let color):
+                titleLabel.textColor = color
+                titleLabel.font = $0.font
+            case .author( _ , _ , let color):
+                authorLabel.textColor = color
+                authorLabel.font = $0.font
+            }
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Details"
