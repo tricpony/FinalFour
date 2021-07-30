@@ -44,7 +44,7 @@ class CellContentView: UIView {
         let stackView = UIStackView.stack(axis: .vertical)
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.add([title, hairline, author, imageView, CGFloat(4)])
+        stackView.add([title, hairline, author, hairline, imageView, CGFloat(4)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         NSLayoutConstraint.activate([
@@ -89,7 +89,7 @@ extension CellContentView: UIContentView {
         }
         activeConfig = configuration
         title.text = configuration.model?.title
-        author.text = configuration.model?.author
+        author.text = configuration.model?.productLabel
         applyStyle(style: configuration.titleStyle)
         applyStyle(style: configuration.authorStyle)
 

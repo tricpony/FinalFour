@@ -1,27 +1,25 @@
 //
-//  Product.swift
+//  MockProduct.swift
 //  FinalFourLab
 //
-//  Created by aarthur on 7/27/21.
+//  Created by aarthur on 7/30/21.
 //
 
 import Foundation
 
-class Product: Codable, Model {
-    static func == (lhs: Product, rhs: Product) -> Bool {
+class MockProduct: Model {
+    static func == (lhs: MockProduct, rhs: MockProduct) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
-    
     var title: String
     var author: String?
     var imageURL: URL?
     var favorite: Bool?
     var imageData: Data?
-    var productLabel: String {
-        guard let author = author else {
-            return "Product"
-        }
-        return "By \(author)"
+    var productLabel = "productLabel"
+
+    init(title: String) {
+        self.title = title
     }
     
     func hash(into hasher: inout Hasher) {

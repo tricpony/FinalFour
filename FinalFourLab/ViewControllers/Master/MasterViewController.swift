@@ -138,8 +138,8 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     // MARK: UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let detailVC = DetailViewController()
         let product = products[indexPath.row]
+        let detailVC = DetailViewController(product: product)
         detailVC.product = product
         if isCompact {
             navigationController?.pushViewController(detailVC, animated: true)

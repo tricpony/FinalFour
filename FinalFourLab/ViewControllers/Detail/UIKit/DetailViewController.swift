@@ -8,8 +8,19 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    var product: Product?
+    var product: Product
     var imageView = UIImageView()
+
+    var product: Product
+
+    init(product: Product) {
+        self.product = product
+        super.init(nibName: .none, bundle: .none)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     private func configureView() {
         let mainStackView = UIStackView.stack()
