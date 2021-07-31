@@ -67,7 +67,7 @@ class DetailViewController: UIViewController {
             infoStackView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor),
             infoStackView.widthAnchor.constraint(equalTo: imageView.widthAnchor),
         ])
-        view.backgroundColor = UIColor(named: "detailBackground")
+        view.backgroundColor = ColorKit.detailBackground.kitColor
         applyStyle()
     }
     

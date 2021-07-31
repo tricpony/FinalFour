@@ -7,6 +7,20 @@
 
 import UIKit
 
+enum ColorKit: String {
+    case authorText
+    case detailBackground
+    case hairline
+    case gridBackground
+    case titleText
+    case detailTitleBackground
+    
+    /// Color of enum.
+    var kitColor: UIColor? {
+        UIColor(named: rawValue)
+    }
+}
+
 enum TextStyle: Hashable {
     case title(String, CGFloat, UIColor?)
     case author(String, CGFloat, UIColor?)
@@ -25,11 +39,11 @@ enum TextStyle: Hashable {
 }
 
 struct FontStyle {
-    static var titleColor = UIColor(named: "title")
+    static var titleColor = ColorKit.titleText.kitColor
     static var titleFontFamily = "AvenirNext-DemiBold"
     static var titleFontSize: CGFloat = 12.0
 
-    static var authorColor = UIColor(named: "author")
+    static var authorColor = ColorKit.authorText.kitColor
     static var authorFontFamily = "AvenirNext-Regular"
     static var authorFontSize: CGFloat = 11.0
 }

@@ -11,11 +11,11 @@
 		D17677FA26B42F0000DA26FA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */; };
 		D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */; };
 		D17677FC26B42F0000DA26FA /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */; };
-		D17677FD26B42F0000DA26FA /* MasterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* MasterCollectionCell.swift */; };
+		D17677FD26B42F0000DA26FA /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */; };
 		D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* CellContentView.swift */; };
 		D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C165E226AFC0DB00CFFCE3 /* AppDelegate.swift */; };
 		D176780026B42F0000DA26FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1669726B1B1FD00CFFCE3 /* Model.swift */; };
-		D176780126B42F0000DA26FA /* MasterContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* MasterContentConfiguration.swift */; };
+		D176780126B42F0000DA26FA /* ProductContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */; };
 		D176780226B42F0000DA26FA /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664026B0004700CFFCE3 /* MasterViewController.swift */; };
 		D176780326B42F0000DA26FA /* Stackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666B26B005EF00CFFCE3 /* Stackable.swift */; };
 		D176780426B42F0000DA26FA /* JsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */; };
@@ -39,11 +39,11 @@
 		D1C1664126B0004700CFFCE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664026B0004700CFFCE3 /* MasterViewController.swift */; };
 		D1C1664A26B0008800CFFCE3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664926B0008800CFFCE3 /* DetailViewController.swift */; };
 		D1C1665226B0025300CFFCE3 /* CellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* CellContentView.swift */; };
-		D1C1665726B0038300CFFCE3 /* MasterContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* MasterContentConfiguration.swift */; };
+		D1C1665726B0038300CFFCE3 /* ProductContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */; };
 		D1C1665F26B0047400CFFCE3 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665E26B0047400CFFCE3 /* ServiceManager.swift */; };
 		D1C1666726B0048F00CFFCE3 /* JsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */; };
 		D1C1666C26B005EF00CFFCE3 /* Stackable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666B26B005EF00CFFCE3 /* Stackable.swift */; };
-		D1C1667926B11C2B00CFFCE3 /* MasterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* MasterCollectionCell.swift */; };
+		D1C1667926B11C2B00CFFCE3 /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */; };
 		D1C1668526B12B1100CFFCE3 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = D1C1668426B12B1100CFFCE3 /* products.json */; };
 		D1C1669826B1B1FD00CFFCE3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1669726B1B1FD00CFFCE3 /* Model.swift */; };
 		D1C166A326B1B4E200CFFCE3 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */; };
@@ -91,11 +91,11 @@
 		D1C1664026B0004700CFFCE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		D1C1664926B0008800CFFCE3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D1C1665126B0025300CFFCE3 /* CellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContentView.swift; sourceTree = "<group>"; };
-		D1C1665626B0038300CFFCE3 /* MasterContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterContentConfiguration.swift; sourceTree = "<group>"; };
+		D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContentConfiguration.swift; sourceTree = "<group>"; };
 		D1C1665E26B0047400CFFCE3 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtility.swift; sourceTree = "<group>"; };
 		D1C1666B26B005EF00CFFCE3 /* Stackable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stackable.swift; sourceTree = "<group>"; };
-		D1C1667826B11C2B00CFFCE3 /* MasterCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionCell.swift; sourceTree = "<group>"; };
+		D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionCell.swift; sourceTree = "<group>"; };
 		D1C1668426B12B1100CFFCE3 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		D1C1669726B1B1FD00CFFCE3 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 		D1C1661626AFC12100CFFCE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D176784F26B44A2E00DA26FA /* Mock */,
 				D17677EA26B4194C00DA26FA /* SwiftUI */,
+				D176784F26B44A2E00DA26FA /* Mock */,
 				D1C1668926B191DC00CFFCE3 /* Views */,
 				D1C1663426AFFD9400CFFCE3 /* JSON */,
 				D1C1662E26AFFD1200CFFCE3 /* Network */,
@@ -311,8 +311,8 @@
 			children = (
 				D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */,
 				D1C1665126B0025300CFFCE3 /* CellContentView.swift */,
-				D1C1665626B0038300CFFCE3 /* MasterContentConfiguration.swift */,
-				D1C1667826B11C2B00CFFCE3 /* MasterCollectionCell.swift */,
+				D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */,
+				D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -503,13 +503,13 @@
 				D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */,
 				D17677FC26B42F0000DA26FA /* LazyImageView.swift in Sources */,
 				D176785626B44A8B00DA26FA /* MockProduct.swift in Sources */,
-				D17677FD26B42F0000DA26FA /* MasterCollectionCell.swift in Sources */,
+				D17677FD26B42F0000DA26FA /* ProductCollectionCell.swift in Sources */,
 				D176783826B432AD00DA26FA /* DetailContent.swift in Sources */,
 				D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */,
 				D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */,
 				D176780026B42F0000DA26FA /* Model.swift in Sources */,
 				D176782D26B430EB00DA26FA /* DetailViewController.swift in Sources */,
-				D176780126B42F0000DA26FA /* MasterContentConfiguration.swift in Sources */,
+				D176780126B42F0000DA26FA /* ProductContentConfiguration.swift in Sources */,
 				D176780226B42F0000DA26FA /* MasterViewController.swift in Sources */,
 				D176780326B42F0000DA26FA /* Stackable.swift in Sources */,
 				D176780426B42F0000DA26FA /* JsonUtility.swift in Sources */,
@@ -527,12 +527,12 @@
 				D1C166B426B2C34200CFFCE3 /* StyleSheet.swift in Sources */,
 				D1C166BD26B338AD00CFFCE3 /* SplitViewController.swift in Sources */,
 				D1C166A326B1B4E200CFFCE3 /* LazyImageView.swift in Sources */,
-				D1C1667926B11C2B00CFFCE3 /* MasterCollectionCell.swift in Sources */,
+				D1C1667926B11C2B00CFFCE3 /* ProductCollectionCell.swift in Sources */,
 				D1C1665226B0025300CFFCE3 /* CellContentView.swift in Sources */,
 				D1C165E326AFC0DB00CFFCE3 /* AppDelegate.swift in Sources */,
 				D1C1669826B1B1FD00CFFCE3 /* Model.swift in Sources */,
 				D176785126B44A4E00DA26FA /* MockProduct.swift in Sources */,
-				D1C1665726B0038300CFFCE3 /* MasterContentConfiguration.swift in Sources */,
+				D1C1665726B0038300CFFCE3 /* ProductContentConfiguration.swift in Sources */,
 				D1C1664126B0004700CFFCE3 /* MasterViewController.swift in Sources */,
 				D1C1666C26B005EF00CFFCE3 /* Stackable.swift in Sources */,
 				D1C1666726B0048F00CFFCE3 /* JsonUtility.swift in Sources */,

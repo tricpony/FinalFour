@@ -1,5 +1,5 @@
 //
-//  MasterCollectionCell.swift
+//  ProductCollectionCell.swift
 //  FinalFourLab
 //
 //  Created by aarthur on 7/28/21.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MasterCollectionCell: UICollectionViewListCell {
+class ProductCollectionCell: UICollectionViewListCell {
     var model: Product?
 
     override func updateConfiguration(using state: UICellConfigurationState) {
-        var newConfiguration = MasterContentConfiguration().updated(for: state)
+        var newConfiguration = ProductContentConfiguration().updated(for: state)
         newConfiguration.model = model
         newConfiguration.titleStyle = TextStyle.titleStyle
         newConfiguration.authorStyle = TextStyle.authorStyle

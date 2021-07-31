@@ -1,5 +1,5 @@
 //
-//  MasterContentConfiguration.swift
+//  ProductContentConfiguration.swift
 //  FinalFourLab
 //
 //  Created by aarthur on 7/27/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct MasterContentConfiguration: UIContentConfiguration, Hashable {
+struct ProductContentConfiguration: UIContentConfiguration, Hashable {
     var model: Product?
     var titleStyle: TextStyle?
     var authorStyle: TextStyle?
@@ -16,7 +16,7 @@ struct MasterContentConfiguration: UIContentConfiguration, Hashable {
         CellContentView(configuration: self)
     }
     
-    func updated(for state: UIConfigurationState) -> MasterContentConfiguration {
+    func updated(for state: UIConfigurationState) -> ProductContentConfiguration {
         self
     }
 }

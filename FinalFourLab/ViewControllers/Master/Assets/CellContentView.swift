@@ -11,16 +11,16 @@ class CellContentView: UIView {
     var title = UILabel()
     var author = UILabel()
     var imageView = LazyImageView()
-    private var activeConfig = MasterContentConfiguration()
+    private var activeConfig = ProductContentConfiguration()
     private var hairline: UIView {
         let line = UIView()
-        line.backgroundColor = UIColor(named: "hairline")
+        line.backgroundColor = ColorKit.hairline.kitColor
         let height = line.heightAnchor.constraint(equalToConstant: 0.5)
         line.addConstraint(height)
         return line
     }
     
-    init(configuration: MasterContentConfiguration) {
+    init(configuration: ProductContentConfiguration) {
         super.init(frame: .zero)
         configureViews()
         apply(configuration: configuration)
@@ -63,7 +63,7 @@ extension CellContentView: UIContentView {
             activeConfig
         }
         set {
-            guard let newConfig = newValue as? MasterContentConfiguration else {
+            guard let newConfig = newValue as? ProductContentConfiguration else {
                 return
             }
             apply(configuration: newConfig)
@@ -83,7 +83,7 @@ extension CellContentView: UIContentView {
         }
     }
     
-    private func apply(configuration: MasterContentConfiguration) {
+    private func apply(configuration: ProductContentConfiguration) {
         guard activeConfig != configuration else {
             return
         }
