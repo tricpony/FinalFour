@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 private let reuseIdentifier = "Cell"
 
@@ -16,7 +15,6 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     var snapshot: NSDiffableDataSourceSnapshot<Int, Product>?
     var products = [Product]()
     let isCompact: Bool
-    private var cancellable: AnyCancellable?
 
     init(isCompact: Bool) {
         self.isCompact = isCompact

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Combine
 
 class ProductCollectionCell: UICollectionViewListCell {
     var model: Product?
+    private var cancellable: AnyCancellable?
 
     override func updateConfiguration(using state: UICellConfigurationState) {
         var newConfiguration = ProductContentConfiguration().updated(for: state)
@@ -21,5 +23,9 @@ class ProductCollectionCell: UICollectionViewListCell {
         
         // Trigger UI update
         contentConfiguration = newConfiguration
+        
+        cancellable = model?.$favorite.sink { [weak self] favorite in
+            self?.setNeedsUpdateConfiguration()
+        }
     }
 }

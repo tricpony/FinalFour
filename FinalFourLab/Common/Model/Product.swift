@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Product: Codable, Model {
+class Product: Codable, Model, ObservableObject {
     static func == (lhs: Product, rhs: Product) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
@@ -16,7 +16,7 @@ class Product: Codable, Model {
     var author: String?
     var imageURL: URL?
     var imageData: Data?
-    private var favorite: Bool?
+    @Published private(set) var favorite: Bool?
     var productLabel: String {
         guard let author = author else {
             return "Product"
@@ -37,5 +37,13 @@ class Product: Codable, Model {
     
     func hash(into hasher: inout Hasher) {
          hasher.combine(ObjectIdentifier(self))
+    }
+    
+    // MARK: Codable
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case author
+        case imageURL
     }
 }
