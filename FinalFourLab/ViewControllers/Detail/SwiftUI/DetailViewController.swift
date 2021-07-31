@@ -42,9 +42,21 @@ class DetailViewController: UIViewController {
         hostingController.didMove(toParent: self)
     }
     
+    private func configureNavBar() {
+        let imageName = product.isFavorite ? "star-filled" : "star-empty"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: imageName), style: .plain, target: self, action: #selector(favTapped))
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
+        configureNavBar()
         title = "Details"
+    }
+    
+    @objc
+    private func favTapped() {
+        product.isFavorite.toggle()
+        configureNavBar()
     }
 }

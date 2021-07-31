@@ -12,6 +12,6 @@ protocol Model: class, Hashable {
     var author: String? { get }
     var imageURL: URL? { get }
     var productLabel: String { get }
-    var favorite: Bool? { get set }
+    var isFavorite: Bool { get set }
     var imageData: Data? { get set }
 }

@@ -14,9 +14,9 @@ class MockProduct: Model {
     var title: String
     var author: String?
     var imageURL: URL?
-    var favorite: Bool?
     var imageData: Data? = UIImage(named: "Fallback")?.pngData()
     var productLabel = "productLabel"
+    var isFavorite: Bool = false
 
     init(title: String) {
         self.title = title

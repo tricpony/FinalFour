@@ -8,6 +8,7 @@
 import UIKit
 
 class CellContentView: UIView {
+    var isFavorite = false
     var title = UILabel()
     var author = UILabel()
     var imageView = LazyImageView()
@@ -30,6 +31,31 @@ class CellContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var authorStackView: Stackable {
+        guard isFavorite == true else { return author }
+        let mainStackView = UIStackView.stack()
+        let leadingStackView = UIStackView.stack()
+        
+        // position author label as leading item in stack
+        leadingStackView.add(author)
+        leadingStackView.alignment = .leading
+
+        // position fav image as trailing item in stack
+        let trailingStackView = UIStackView.stack()
+        let favImageView = UIImageView(image: UIImage(named: "masterFav"))
+        favImageView.contentMode = .scaleAspectFit
+        trailingStackView.add(favImageView)
+        trailingStackView.alignment = .trailing
+        mainStackView.add([leadingStackView, trailingStackView])
+
+        NSLayoutConstraint.activate([
+            favImageView.heightAnchor.constraint(equalToConstant: 15),
+            favImageView.widthAnchor.constraint(equalToConstant: 15)
+        ])
+        
+        return mainStackView
+    }
+    
     private func configureViews() {
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.black.cgColor
@@ -44,7 +70,7 @@ class CellContentView: UIView {
         let stackView = UIStackView.stack(axis: .vertical)
         stackView.alignment = .fill
         stackView.distribution = .fill
-        stackView.add([title, UIView.hairline(), author, UIView.hairline(), imageView, CGFloat(4)])
+        stackView.add([title, UIView.hairline(), authorStackView, UIView.hairline(), imageView, CGFloat(4)])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stackView)
         NSLayoutConstraint.activate([
@@ -90,6 +116,7 @@ extension CellContentView: UIContentView {
         activeConfig = configuration
         title.text = configuration.model?.title
         author.text = configuration.model?.productLabel
+        isFavorite = configuration.model?.isFavorite ?? false
         applyStyle(style: configuration.titleStyle)
         applyStyle(style: configuration.authorStyle)
 

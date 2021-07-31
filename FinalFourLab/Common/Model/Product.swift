@@ -15,14 +15,25 @@ class Product: Codable, Model {
     var title: String
     var author: String?
     var imageURL: URL?
-    var favorite: Bool?
     var imageData: Data?
+    private var favorite: Bool?
     var productLabel: String {
         guard let author = author else {
             return "Product"
         }
         return "By \(author)"
     }
+    
+    var isFavorite: Bool {
+        get {
+            favorite ?? false
+        }
+        set {
+            favorite = newValue
+        }
+    }
+
+    // MARK: Hashable
     
     func hash(into hasher: inout Hasher) {
          hasher.combine(ObjectIdentifier(self))
