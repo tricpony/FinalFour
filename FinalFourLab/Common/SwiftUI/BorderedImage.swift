@@ -14,10 +14,11 @@ enum Shape {
 
 struct BorderedImage: View {
     let imageData: Data
-    var shape = Shape.circle
+    var shape: Shape
 
-    init(imageData: Data) {
+    init(imageData: Data, shape: Shape = .circle) {
         self.imageData = imageData
+        self.shape = shape
     }
     
     var body: some View {
