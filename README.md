@@ -1,27 +1,30 @@
 # README #
 
-Here's what you will find in DropToken.  DropToken is a game much like Connect 4.
-
-### How to Play ###
-Select who will play first.  When it is your turn, tap on any column to insert a new token.
-
-### How to Win ###
-First player to fill any row, column, or diagonal wins.
+Here's what you will find in FinalFourLab.
 
 ### Language ###
 The project was written in Swift.
 
-### Rule Engine ###
-The rule engine determines when a player wins.  Since the game board fills from the bottom, searching for a winner starts from bottom up.
+### SwiftUI ###
+A target was added -- FinalFourSwiftUI -- to demo a different detail view.  To try it, select FinalFourSwiftUI target and run the app.  Only the detail is SwiftUI, master is UIKit.
+The entire app is UIKit for target FinalFourLab.
 
-### Game Event ###
-Game events drive the flow of the game from start to finish.
+### Adaptive Layout ###
+The newly designed UISplitViewController is used with style doubleColumn to support all size classes.
+
+### UICollectionViewCompositionalLayout ###
+The collection view grid is using the new layout functionality from UICollectionViewCompositionalLayout.
+
+### UIContentConfiguration ###
+The collection view cell is using the new UIContentConfiguration to manage cell content.
+
+### Combine ###
+Combine was used to make the model observable and react to changes on the property *favorite*
 
 ### Known Issues ###
-In SwiftUI version of DetailVeiwController the product artwork was coded to have a fixed size for all selections -- not getting that behavior.
+For target FinalFourLab, navigation from master to detail is choppy.  This does not happen when running FinalFourSwiftUI.
+For target FinalFourSwiftUI, in DetailVeiwController, the product artwork was coded to have a fixed size for all selections -- not getting that behavior.  
+Most images look right, but certain ones are smaller than specified.
 
-### Leaks ###
-Verified that the DetailVeiwController is not leaking.
-
-### Unit Tests ###
+### UI Tests ###
 Unit tests have been included with special emphasis on the rule engine and game events.
