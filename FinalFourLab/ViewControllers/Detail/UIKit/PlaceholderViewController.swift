@@ -18,6 +18,7 @@ class PlaceholderViewController: UIViewController {
     }
 
     private func configureView() {
+        placeHolderLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         let mainStackView = UIStackView.stack()
         let verticalStack = UIStackView.stack(axis: .vertical)
         verticalStack.alignment = .center
