@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     
     init(product: Product) {
         self.product = product
+        self.imageView.accessibilityIdentifier = product.imageURL?.absoluteString ?? "empty"
         super.init(nibName: .none, bundle: .none)
     }
 
@@ -90,6 +91,7 @@ class DetailViewController: UIViewController {
     private func configureNavBar() {
         let imageName = product.isFavorite ? "star-filled" : "star-empty"
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: imageName), style: .plain, target: self, action: #selector(favTapped))
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = product.isFavorite ? "on" : "off"
     }
 
     override func viewDidLoad() {

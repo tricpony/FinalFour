@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16D10F226B74E2C004DC802 /* FavoriteTestsIphone.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D10F126B74E2C004DC802 /* FavoriteTestsIphone.swift */; };
+		D16D10F826B74EB0004DC802 /* FavoriteTestsIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D10F726B74EB0004DC802 /* FavoriteTestsIpad.swift */; };
 		D17677E626B383DC00DA26FA /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */; };
 		D17677FA26B42F0000DA26FA /* StyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */; };
 		D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */; };
@@ -34,7 +36,6 @@
 		D1C165EC26AFC0DE00CFFCE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1C165EB26AFC0DE00CFFCE3 /* Assets.xcassets */; };
 		D1C165EF26AFC0DE00CFFCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C165ED26AFC0DE00CFFCE3 /* LaunchScreen.storyboard */; };
 		D1C165FA26AFC0DF00CFFCE3 /* FinalFourLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C165F926AFC0DF00CFFCE3 /* FinalFourLabTests.swift */; };
-		D1C1660526AFC0E000CFFCE3 /* FinalFourLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1660426AFC0E000CFFCE3 /* FinalFourLabUITests.swift */; };
 		D1C1662726AFFAF200CFFCE3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1662626AFFAF200CFFCE3 /* Product.swift */; };
 		D1C1664126B0004700CFFCE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664026B0004700CFFCE3 /* MasterViewController.swift */; };
 		D1C1664A26B0008800CFFCE3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664926B0008800CFFCE3 /* DetailViewController.swift */; };
@@ -70,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		D16D10CE26B65205004DC802 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D16D10F126B74E2C004DC802 /* FavoriteTestsIphone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTestsIphone.swift; sourceTree = "<group>"; };
+		D16D10F726B74EB0004DC802 /* FavoriteTestsIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTestsIpad.swift; sourceTree = "<group>"; };
 		D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		D17677EB26B41A2B00DA26FA /* BorderedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImage.swift; sourceTree = "<group>"; };
 		D176781226B42F0000DA26FA /* FinalFourSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalFourSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +89,6 @@
 		D1C165F926AFC0DF00CFFCE3 /* FinalFourLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalFourLabTests.swift; sourceTree = "<group>"; };
 		D1C165FB26AFC0DF00CFFCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C1660026AFC0DF00CFFCE3 /* FinalFourLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalFourLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1C1660426AFC0E000CFFCE3 /* FinalFourLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalFourLabUITests.swift; sourceTree = "<group>"; };
 		D1C1660626AFC0E000CFFCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C1662626AFFAF200CFFCE3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D1C1664026B0004700CFFCE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +221,8 @@
 		D1C1660326AFC0DF00CFFCE3 /* FinalFourLabUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D1C1660426AFC0E000CFFCE3 /* FinalFourLabUITests.swift */,
+				D16D10F126B74E2C004DC802 /* FavoriteTestsIphone.swift */,
+				D16D10F726B74EB0004DC802 /* FavoriteTestsIpad.swift */,
 				D1C1660626AFC0E000CFFCE3 /* Info.plist */,
 			);
 			path = FinalFourLabUITests;
@@ -557,7 +560,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1C1660526AFC0E000CFFCE3 /* FinalFourLabUITests.swift in Sources */,
+				D16D10F226B74E2C004DC802 /* FavoriteTestsIphone.swift in Sources */,
+				D16D10F826B74EB0004DC802 /* FavoriteTestsIpad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
