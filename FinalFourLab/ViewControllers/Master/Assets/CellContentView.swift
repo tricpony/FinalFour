@@ -24,7 +24,7 @@ class CellContentView: UIView {
     
     init(configuration: ProductContentConfiguration) {
         super.init(frame: .zero)
-        configureViews()
+        configureView()
         apply(configuration: configuration)
     }
     
@@ -55,7 +55,7 @@ class CellContentView: UIView {
         return mainStackView
     }
     
-    private func configureViews() {
+    private func configureView() {
         layer.borderWidth = 0.5
         layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 5
