@@ -27,7 +27,7 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     
     private func registerAssets(on collectionView: UICollectionView) {
         let cellRegistration = UICollectionView.CellRegistration<ProductCollectionCell, Product> { (cell, indexPath, item) in
-            cell.model = item
+            cell.product = item
         }
         
         // Define data source

@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 class ProductCollectionCell: UICollectionViewListCell {
-    var model: Product?
+    var product: Product?
     private var cancellable: AnyCancellable?
     var isFavorite: Bool? {
         didSet {
@@ -30,18 +30,22 @@ class ProductCollectionCell: UICollectionViewListCell {
 
     override func updateConfiguration(using state: UICellConfigurationState) {
         var newConfiguration = ProductContentConfiguration().updated(for: state)
-        newConfiguration.product = model
+        var backgroundConfig = UIBackgroundConfiguration.listPlainCell().updated(for: state)
+
+        newConfiguration.product = product
         newConfiguration.titleStyle = TextStyle.titleStyle
         newConfiguration.authorStyle = TextStyle.authorStyle
         
-        contentView.backgroundColor = .clear
-        backgroundView?.backgroundColor = .clear
-        
+        // background when selected
+        backgroundConfig.backgroundColor = state.isSelected ? ColorKit.cellBackgroundSelected.kitColor : .systemBackground
+        backgroundConfiguration = backgroundConfig
+
         // Trigger UI update
         contentConfiguration = newConfiguration
         
         if state.isFavorite != .none {
-            cancellable = model?.$favorite.sink { [weak self] favorite in
+            cancellable = product?.$favorite.sink { [weak self] favorite in
+                // triggered when changing the @Published property favorite on ObservableObject Product
                 self?.isFavorite = favorite
             }
         }
@@ -49,6 +53,7 @@ class ProductCollectionCell: UICollectionViewListCell {
 }
 
 extension UIConfigurationStateCustomKey {
+    // Adding custom configuratino key for favorites
     static let isFavorite = UIConfigurationStateCustomKey("com.my-app.MyCell.isFavorite")
 }
 

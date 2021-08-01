@@ -14,6 +14,7 @@ enum ColorKit: String {
     case gridBackground
     case titleText
     case detailTitleBackground
+    case cellBackgroundSelected = "CellBackgroundSelected"
     
     /// Color of enum.
     var kitColor: UIColor? {
