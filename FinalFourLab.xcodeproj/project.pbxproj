@@ -69,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D16D10CE26B65205004DC802 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D17677E526B383DC00DA26FA /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
 		D17677EB26B41A2B00DA26FA /* BorderedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedImage.swift; sourceTree = "<group>"; };
 		D176781226B42F0000DA26FA /* FinalFourSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalFourSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +173,7 @@
 		D1C165D626AFC0DB00CFFCE3 = {
 			isa = PBXGroup;
 			children = (
+				D16D10CE26B65205004DC802 /* README.md */,
 				D1C165E126AFC0DB00CFFCE3 /* FinalFourLab */,
 				D1C165F826AFC0DF00CFFCE3 /* FinalFourLabTests */,
 				D1C1660326AFC0DF00CFFCE3 /* FinalFourLabUITests */,
