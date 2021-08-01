@@ -99,6 +99,10 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     // MARK: UICollectionViewDelegate
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if isCompact {
+            collectionView.deselectItem(at: indexPath, animated: false)
+        }
+        
         let product = products[indexPath.row]
         let detailVC = DetailViewController(product: product)
         detailVC.product = product

@@ -12,6 +12,7 @@ class CellContentView: UIView {
     var title = UILabel()
     var author = UILabel()
     var imageView = LazyImageView()
+    var favImageView = UIImageView()
     private var activeConfig = ProductContentConfiguration()
     private var hairline: UIView {
         let line = UIView()
@@ -31,8 +32,7 @@ class CellContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var authorStackView: Stackable {
-        guard isFavorite == true else { return author }
+    var authorStackView: UIStackView {
         let mainStackView = UIStackView.stack()
         let leadingStackView = UIStackView.stack()
         
@@ -42,15 +42,14 @@ class CellContentView: UIView {
 
         // position fav image as trailing item in stack
         let trailingStackView = UIStackView.stack()
-        let favImageView = UIImageView(image: UIImage(named: "masterFav"))
         favImageView.contentMode = .scaleAspectFit
         trailingStackView.add(favImageView)
         trailingStackView.alignment = .trailing
         mainStackView.add([leadingStackView, trailingStackView])
 
         NSLayoutConstraint.activate([
-            favImageView.heightAnchor.constraint(equalToConstant: 15),
-            favImageView.widthAnchor.constraint(equalToConstant: 15)
+            favImageView.heightAnchor.constraint(equalToConstant: 18),
+            favImageView.widthAnchor.constraint(equalToConstant: 18)
         ])
         
         return mainStackView
@@ -114,15 +113,16 @@ extension CellContentView: UIContentView {
             return
         }
         activeConfig = configuration
-        title.text = configuration.model?.title
-        author.text = configuration.model?.productLabel
-        isFavorite = configuration.model?.isFavorite ?? false
+        title.text = configuration.product?.title
+        author.text = configuration.product?.productLabel
+        isFavorite = configuration.product?.isFavorite ?? false
         applyStyle(style: configuration.titleStyle)
         applyStyle(style: configuration.authorStyle)
+        favImageView.image = isFavorite ? UIImage(named: "Star") : UIImage()
 
-        guard let model = configuration.model, let _ = model.imageData else {
+        guard let model = configuration.product, let _ = model.imageData else {
             // load the image
-            imageView.performImageService(model: configuration.model)
+            imageView.performImageService(model: configuration.product)
             return
         }
         imageView.fillImage(model: model)
