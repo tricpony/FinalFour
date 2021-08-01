@@ -17,5 +17,11 @@ The rule engine determines when a player wins.  Since the game board fills from 
 ### Game Event ###
 Game events drive the flow of the game from start to finish.
 
+### Known Issues ###
+In SwiftUI version of DetailVeiwController the product artwork was coded to have a fixed size for all selections -- not getting that behavior.
+
+### Leaks ###
+Verified that the DetailVeiwController is not leaking.
+
 ### Unit Tests ###
 Unit tests have been included with special emphasis on the rule engine and game events.
