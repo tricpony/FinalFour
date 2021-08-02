@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Model class to represent json data.
 class Product: Codable, Model, ObservableObject {
     static func == (lhs: Product, rhs: Product) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)

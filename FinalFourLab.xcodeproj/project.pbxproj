@@ -16,7 +16,7 @@
 		D17677FB26B42F0000DA26FA /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166BC26B338AC00CFFCE3 /* SplitViewController.swift */; };
 		D17677FC26B42F0000DA26FA /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C166A226B1B4E200CFFCE3 /* LazyImageView.swift */; };
 		D17677FD26B42F0000DA26FA /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */; };
-		D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* CellContentView.swift */; };
+		D17677FE26B42F0000DA26FA /* ProductCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* ProductCellContentView.swift */; };
 		D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C165E226AFC0DB00CFFCE3 /* AppDelegate.swift */; };
 		D176780026B42F0000DA26FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1669726B1B1FD00CFFCE3 /* Model.swift */; };
 		D176780126B42F0000DA26FA /* ProductContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */; };
@@ -40,7 +40,7 @@
 		D1C1662726AFFAF200CFFCE3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1662626AFFAF200CFFCE3 /* Product.swift */; };
 		D1C1664126B0004700CFFCE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664026B0004700CFFCE3 /* MasterViewController.swift */; };
 		D1C1664A26B0008800CFFCE3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1664926B0008800CFFCE3 /* DetailViewController.swift */; };
-		D1C1665226B0025300CFFCE3 /* CellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* CellContentView.swift */; };
+		D1C1665226B0025300CFFCE3 /* ProductCellContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665126B0025300CFFCE3 /* ProductCellContentView.swift */; };
 		D1C1665726B0038300CFFCE3 /* ProductContentConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */; };
 		D1C1665F26B0047400CFFCE3 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1665E26B0047400CFFCE3 /* ServiceManager.swift */; };
 		D1C1666726B0048F00CFFCE3 /* JsonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */; };
@@ -95,7 +95,7 @@
 		D1C1662626AFFAF200CFFCE3 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		D1C1664026B0004700CFFCE3 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		D1C1664926B0008800CFFCE3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		D1C1665126B0025300CFFCE3 /* CellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContentView.swift; sourceTree = "<group>"; };
+		D1C1665126B0025300CFFCE3 /* ProductCellContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellContentView.swift; sourceTree = "<group>"; };
 		D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContentConfiguration.swift; sourceTree = "<group>"; };
 		D1C1665E26B0047400CFFCE3 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1C1666626B0048F00CFFCE3 /* JsonUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtility.swift; sourceTree = "<group>"; };
@@ -318,7 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				D1C166B326B2C34200CFFCE3 /* StyleSheet.swift */,
-				D1C1665126B0025300CFFCE3 /* CellContentView.swift */,
+				D1C1665126B0025300CFFCE3 /* ProductCellContentView.swift */,
 				D1C1665626B0038300CFFCE3 /* ProductContentConfiguration.swift */,
 				D1C1667826B11C2B00CFFCE3 /* ProductCollectionCell.swift */,
 			);
@@ -514,7 +514,7 @@
 				D176785626B44A8B00DA26FA /* MockProduct.swift in Sources */,
 				D17677FD26B42F0000DA26FA /* ProductCollectionCell.swift in Sources */,
 				D176783826B432AD00DA26FA /* DetailContent.swift in Sources */,
-				D17677FE26B42F0000DA26FA /* CellContentView.swift in Sources */,
+				D17677FE26B42F0000DA26FA /* ProductCellContentView.swift in Sources */,
 				D17677FF26B42F0000DA26FA /* AppDelegate.swift in Sources */,
 				D176780026B42F0000DA26FA /* Model.swift in Sources */,
 				D176782D26B430EB00DA26FA /* DetailViewController.swift in Sources */,
@@ -537,7 +537,7 @@
 				D1C166BD26B338AD00CFFCE3 /* SplitViewController.swift in Sources */,
 				D1C166A326B1B4E200CFFCE3 /* LazyImageView.swift in Sources */,
 				D1C1667926B11C2B00CFFCE3 /* ProductCollectionCell.swift in Sources */,
-				D1C1665226B0025300CFFCE3 /* CellContentView.swift in Sources */,
+				D1C1665226B0025300CFFCE3 /* ProductCellContentView.swift in Sources */,
 				D1C165E326AFC0DB00CFFCE3 /* AppDelegate.swift in Sources */,
 				D1C1669826B1B1FD00CFFCE3 /* Model.swift in Sources */,
 				D176785126B44A4E00DA26FA /* MockProduct.swift in Sources */,

@@ -12,6 +12,7 @@ enum Shape {
     case circle
 }
 
+/// Presents an image inside a drop shadow bordered image, either as circle or rectangle.
 struct BorderedImage: View {
     let imageData: Data
     var shape: Shape

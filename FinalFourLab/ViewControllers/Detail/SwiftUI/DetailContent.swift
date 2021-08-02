@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Holds full content for the view in DetailViewController.
 struct DetailContent<T: Model>: View {
     let edgePadding: CGFloat = 4
     var product: T

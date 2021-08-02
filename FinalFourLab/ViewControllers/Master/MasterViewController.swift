@@ -9,6 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+/// Contains a grid of all products.
 class MasterViewController: UIViewController, UICollectionViewDelegate {
     var collectionView: UICollectionView?
     var dataSource: UICollectionViewDiffableDataSource<Int, Product>?
@@ -25,6 +26,9 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Register collection view cell class, data source to create those cells, and kick off the load.
+    /// - Parameters:
+    ///   - collectionView: Collection view using the registrations.
     private func registerAssets(on collectionView: UICollectionView) {
         let cellRegistration = UICollectionView.CellRegistration<ProductCollectionCell, Product> { (cell, indexPath, item) in
             cell.product = item
@@ -51,6 +55,11 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
         dataSource?.apply(snapshot, animatingDifferences: false)
     }
     
+    /// Create an instance of UICollectionViewCompositionalLayout that is configured to render the collection view in 2 columns.
+    /// - Parameters:
+    ///   - tableView: TableView of next cell.
+    ///   - indexPath: Index path of next cell.
+    /// - Returns: Layout object that formats content in 2 columns narrow spacing between cells and thicker space between sections.
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .fractionalWidth(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -64,6 +73,7 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
         return layout
     }
 
+    /// Setup the view.
     private func configureView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createCompositionalLayout())
         view.addSubview(collectionView)
@@ -82,6 +92,7 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
         registerAssets(on: collectionView)
     }
     
+    /// Parse product data located in the app bundle.  These are mapped to an array of Product and displayed in the collection view.
     private func loadData() {
         guard let url = Bundle.main.url(forResource: "products", withExtension: "json") else { return }
         guard let data = try? Data(contentsOf: url) else { return }

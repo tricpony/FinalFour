@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Color mapping to assets catalog.
 enum ColorKit: String {
     case authorText
     case detailBackground
@@ -22,6 +23,7 @@ enum ColorKit: String {
     }
 }
 
+/// Pre-defined font, size, and color styles for app labels.
 enum TextStyle: Hashable {
     case title(String, CGFloat, UIColor?)
     case author(String, CGFloat, UIColor?)
@@ -39,6 +41,7 @@ enum TextStyle: Hashable {
     }
 }
 
+/// Title and author font styles.
 struct FontStyle {
     static var titleColor = ColorKit.titleText.kitColor
     static var titleFontFamily = "AvenirNext-DemiBold"

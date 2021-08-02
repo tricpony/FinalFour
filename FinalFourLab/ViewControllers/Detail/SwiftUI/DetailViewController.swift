@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+/// SwiftUI based product detail view controller.
 class DetailViewController: UIViewController {
     var product: Product
 
@@ -20,6 +21,7 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Setup the view.
     private func configureView() {
         let hostingController = UIHostingController(rootView: DetailContent<Product>(product: product))
 

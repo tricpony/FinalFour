@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Defines configuration of collection view cell's content view.
 struct ProductContentConfiguration: UIContentConfiguration, Hashable {
     var product: Product?
     var titleStyle: TextStyle?
@@ -16,7 +17,7 @@ struct ProductContentConfiguration: UIContentConfiguration, Hashable {
     var isFav = false
     
     func makeContentView() -> UIView & UIContentView {
-        CellContentView(configuration: self)
+        ProductCellContentView(configuration: self)
     }
     
     func updated(for state: UIConfigurationState) -> ProductContentConfiguration {

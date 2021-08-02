@@ -49,6 +49,9 @@ class LazyImageView: UIView {
         imageView.image = .none
     }
     
+    /// Fetch image and load into image view.
+    /// - Parameters:
+    ///   - model: Protocol the product conforms to.
     func performImageService<T: Model>(model: T?) {
         guard let url = model?.imageURL else { return }
         pinwheel.startAnimating()
@@ -71,6 +74,9 @@ class LazyImageView: UIView {
         }
     }
 
+    /// Load image image view.
+    /// - Parameters:
+    ///   - model: Protocol the product conforms to.
     func fillImage<T: Model>(model: T) {
         guard let imageData = model.imageData else { return }
         imageView.image = UIImage(data: imageData)

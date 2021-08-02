@@ -19,12 +19,13 @@ The collection view grid is using the new layout functionality from UICollection
 The collection view cell is using the new UIContentConfiguration to manage cell content.
 
 ### Combine ###
-Combine was used to make the model observable and react to changes on the property *favorite*
+Combine is used to make the model observable and react to changes on the property *favorite*
 
 ### Known Issues ###
 For target FinalFourLab, navigation from master to detail is choppy.  This does not happen when running FinalFourSwiftUI.
 For target FinalFourSwiftUI, in DetailVeiwController, the product artwork was coded to have a fixed size for all selections -- not getting that behavior.  
 Most images look right, but certain ones are smaller than specified.
+Landscape looks good on the regular size class but fails in compact.  Therefore landscape has been disabled.
 
-### UI Tests ###
-Unit tests have been included with special emphasis on the rule engine and game events.
+### Testing ###
+Both unit tests and UI tests have been included.  UI tests only cover the FinalFourLab target.

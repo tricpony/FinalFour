@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Empty secondary view for iPad when app first launches.
 class PlaceholderViewController: UIViewController {
     var placeHolderLabel = UILabel()
 
@@ -16,7 +17,8 @@ class PlaceholderViewController: UIViewController {
         placeHolderLabel.text = "Empty Selection"
         
     }
-
+    
+    /// Setup the view.
     private func configureView() {
         placeHolderLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         let mainStackView = UIStackView.stack()

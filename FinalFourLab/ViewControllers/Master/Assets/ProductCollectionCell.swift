@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 
+/// Collectoin view cell for products.
 class ProductCollectionCell: UICollectionViewListCell {
     var product: Product?
     private var cancellable: AnyCancellable?

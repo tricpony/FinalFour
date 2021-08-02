@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Content view of product collection view cell.
 class ProductCellContentView: UIView {
     var isFavorite = false
     var title = UILabel()

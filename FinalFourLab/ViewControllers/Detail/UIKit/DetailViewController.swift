@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// UIKit based product detail view controller.
 class DetailViewController: UIViewController {
     var product: Product
     var imageView = UIImageView()
@@ -23,6 +24,7 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    /// Setup the view.
     private func configureView() {
         let mainStackView = UIStackView.stack()
         let infoStackView = UIStackView.stack(axis: .vertical)
