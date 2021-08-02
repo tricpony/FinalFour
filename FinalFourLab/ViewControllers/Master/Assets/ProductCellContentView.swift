@@ -9,19 +9,11 @@ import UIKit
 
 /// Content view of product collection view cell.
 class ProductCellContentView: UIView {
-    var isFavorite = false
     var title = UILabel()
     var author = UILabel()
     var imageView = LazyImageView()
     var favImageView = UIImageView()
     private var activeConfig = ProductContentConfiguration()
-    private var hairline: UIView {
-        let line = UIView()
-        line.backgroundColor = ColorKit.hairline.kitColor
-        let height = line.heightAnchor.constraint(equalToConstant: 0.5)
-        line.addConstraint(height)
-        return line
-    }
     
     init(configuration: ProductContentConfiguration) {
         super.init(frame: .zero)
@@ -124,7 +116,7 @@ extension ProductCellContentView: UIContentView {
         activeConfig = configuration
         title.text = configuration.product?.title
         author.text = configuration.product?.productLabel
-        isFavorite = configuration.product?.isFavorite ?? false
+        let isFavorite = configuration.product?.isFavorite ?? false
         applyStyle(style: configuration.titleStyle)
         applyStyle(style: configuration.authorStyle)
         favImageView.image = isFavorite ? UIImage(named: "Star") : UIImage()
