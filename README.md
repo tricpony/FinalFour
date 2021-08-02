@@ -19,7 +19,7 @@ The collection view grid is using the new layout functionality from UICollection
 The collection view cell is using the new UIContentConfiguration to manage cell content.
 
 ### Combine ###
-Combine is used to make the model observable and reactable to changes on the property *favorite*
+Combine is used to make the model observable on the property *favorite*
 
 ### Known Issues ###
 For target FinalFourLab, navigation from master to detail is choppy.  This does not happen when running FinalFourSwiftUI.
