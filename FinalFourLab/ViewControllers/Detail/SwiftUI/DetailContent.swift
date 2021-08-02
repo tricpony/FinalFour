@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// Defines full content for the view in the SwiftUI version of DetailViewController.
+/// Defines content for the view in the SwiftUI version of DetailViewController.
 struct DetailContent<T: Model>: View {
     let edgePadding: CGFloat = 4
     var product: T
