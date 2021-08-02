@@ -1,0 +1,26 @@
+[
+    [
+        {
+          "title" : "title",
+          "author" : "author",
+          "imageURL" : "https://www.finalfour.com"
+        }
+    ],
+    [
+        {
+          "title" : "title",
+          "imageURL" : "imageURL"
+        }
+    ],
+    [
+        {
+          "title" : "title",
+          "author" : "author",
+        }
+    ],
+    [
+        {
+          "title" : "title",
+        }
+    ]
+]
