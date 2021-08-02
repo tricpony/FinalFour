@@ -37,7 +37,7 @@ class ProductCollectionCell: UICollectionViewListCell {
         newConfiguration.titleStyle = TextStyle.titleStyle
         newConfiguration.authorStyle = TextStyle.authorStyle
         
-        // background when selected
+        // selected state background
         backgroundConfig.backgroundColor = state.isSelected ? ColorKit.cellBackgroundSelected.kitColor : .systemBackground
         backgroundConfiguration = backgroundConfig
 

@@ -116,6 +116,9 @@ class DetailViewController: UIViewController {
     
     @objc
     private func favTapped() {
+        // an @Published propery on product will change here
+        // triggering the matching cell in MasterViewController
+        // to update its content view and display fav icon
         product.isFavorite.toggle()
         configureNavBar()
     }
