@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-/// SwiftUI based product detail view controller.
+/// SwiftUI based product detail view controller.  FinalFourSwiftUI target will load this version.
 class DetailViewController: UIViewController {
     var product: Product
 

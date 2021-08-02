@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Protocol that supports a nested stack view architecture in a purely programmatic UI.
 protocol Stackable {
     func configure(stack: UIStackView)
 }
@@ -30,6 +31,7 @@ extension UIStackView {
 
 extension UIView: Stackable {
     
+    /// Make a thin line.
     static func hairline() -> UIView {
         let line = UIView()
         line.backgroundColor = UIColor(named: "hairline")

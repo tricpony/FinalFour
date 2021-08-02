@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Mock data used for SwiftUI preview.
 class MockProduct: Model {
     static func == (lhs: MockProduct, rhs: MockProduct) -> Bool {
         ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
