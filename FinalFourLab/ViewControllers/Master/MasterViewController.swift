@@ -56,9 +56,6 @@ class MasterViewController: UIViewController, UICollectionViewDelegate {
     }
     
     /// Create an instance of UICollectionViewCompositionalLayout that is configured to render the collection view in 2 columns.
-    /// - Parameters:
-    ///   - tableView: TableView of next cell.
-    ///   - indexPath: Index path of next cell.
     /// - Returns: Layout object that formats content in 2 columns narrow spacing between cells and thicker space between sections.
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/2), heightDimension: .fractionalWidth(1))
